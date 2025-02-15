@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AltStore Repo</title>
     <style>
+        /* Default theme styles (dark theme) */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #fafafa;
@@ -14,9 +15,9 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Main wrapper */
         .wrapper {
             width: 100%;
             max-width: 800px;
@@ -29,9 +30,9 @@
             flex-direction: column;
             align-items: center;
             gap: 20px;
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
 
-        /* Banner */
         .banner {
             width: 100%;
             padding: 15px;
@@ -43,21 +44,18 @@
             border-radius: 8px;
         }
 
-        /* Header */
         h1 {
             font-size: 32px;
             color: #333;
             margin: 10px 0;
         }
 
-        /* Description */
         p {
             color: #555;
             font-size: 16px;
             line-height: 1.5;
         }
 
-        /* Button */
         .cta-button {
             padding: 15px 25px;
             background-color: #0078d4;
@@ -76,7 +74,19 @@
             transform: translateY(-3px);
         }
 
-        /* Code block */
+        .links a {
+            color: #0078d4;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #005a8d;
+        }
+
         code {
             background-color: #f1f1f1;
             color: #333;
@@ -89,7 +99,6 @@
             margin-top: 20px;
         }
 
-        /* Footer */
         footer {
             font-size: 14px;
             color: #777;
@@ -105,30 +114,105 @@
             text-decoration: underline;
         }
 
+        /* Light theme overrides */
+        .light-theme body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .light-theme .wrapper {
+            background-color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .light-theme .cta-button {
+            background-color: #005a8d;
+        }
+
+        .light-theme .cta-button:hover {
+            background-color: #0078d4;
+        }
+
+        .light-theme footer {
+            color: #555;
+        }
+
+        .switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .switcher:hover {
+            background-color: #005a8d;
+        }
+
     </style>
 </head>
 <body>
 
+    <!-- Switcher button -->
+    <button class="switcher" onclick="toggleTheme()">Switch to Light Theme</button>
+
     <!-- Main Wrapper -->
     <div class="wrapper">
-        <!-- Banner -->
         <div class="banner">
             AltStore Repo - Dodaj nasze repozytorium!
         </div>
 
-        <!-- Main Content -->
         <h1>AltStore Repo</h1>
         <p>Dodaj nasze repozytorium do AltStore, klikając poniższy link:</p>
         <a href="https://twoj-nick.github.io/nazwa-repozytorium/altstore.json" class="cta-button" target="_blank">Dodaj do AltStore</a>
         <p>Skopiuj i wklej ten link ręcznie, jeśli potrzebujesz:</p>
         <code>https://twoj-nick.github.io/nazwa-repozytorium/altstore.json</code>
 
-        <!-- Footer -->
+        <div class="links">
+            <p>Więcej informacji:</p>
+            <a href="https://github.com/TwojeImie/altstore-repo" target="_blank">Zobacz projekt na GitHub</a>
+            <a href="https://twoj-nick.github.io/nazwa-repozytorium" target="_blank">Przejdź na stronę główną projektu</a>
+            <a href="https://twoj-nick.github.io/nazwa-repozytorium/docs" target="_blank">Dokumentacja projektu</a>
+        </div>
+
         <footer>
             &copy; 2025 AltStore Repo. Wszystkie prawa zastrzeżone. <br>
             <a href="https://github.com/TwojeImie" target="_blank">Odwiedź nasz GitHub</a>
         </footer>
     </div>
+
+    <script>
+        // Function to toggle theme
+        function toggleTheme() {
+            const body = document.body;
+            const switcher = document.querySelector('.switcher');
+
+            body.classList.toggle('light-theme');
+
+            // Toggle button text
+            if (body.classList.contains('light-theme')) {
+                switcher.textContent = 'Switch to Dark Theme';
+                localStorage.setItem('theme', 'light');
+            } else {
+                switcher.textContent = 'Switch to Light Theme';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Check localStorage for saved theme preference
+        window.onload = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-theme');
+                document.querySelector('.switcher').textContent = 'Switch to Dark Theme';
+            }
+        }
+    </script>
 
 </body>
 </html>
