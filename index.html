@@ -3,262 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dodaj nasze repozytorium do AltStore, aby łatwo instalować aplikacje i uzyskać dostęp do najnowszych aktualizacji.">
+    <meta name="keywords" content="AltStore, repozytorium, aplikacje, instalacja, GitHub, AltStore Repo, linki, darmowe repozytoria">
+    <meta name="author" content="TwojeImie">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AltStore Repo">
+    <meta property="og:description" content="Dodaj nasze repozytorium do AltStore, klikając poniższy link i uzyskaj dostęp do aplikacji.">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png?ex=67b1c920&is=67b077a0&hm=57b136c2946a394db15020f57f33b71c0fb1ab49f9e1fa95488c4660ef8a266c&">
+    <meta property="og:url" content="https://twoj-nick.github.io/nazwa-repozytorium/">
+    <meta property="og:type" content="website">
+    
     <title>AltStore Repo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <style>
-        /* Default theme styles (dark theme) */
         body {
             font-family: 'Arial', sans-serif;
+            text-align: center;
             background-color: #0d0d0d;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             color: white;
-            transition: background-color 0.3s, color 0.3s;
+            padding: 20px;
+            margin: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .wrapper {
-            width: 100%;
-            max-width: 800px;
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            transition: background-color 0.3s, box-shadow 0.3s;
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: linear-gradient(135deg, #1e1e1e, #292929);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            background: #444;
+            padding: 12px 18px;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        a:hover {
+            background: #4caf50;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        code {
+            background: #2c2c2c;
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: block;
+            margin-top: 15px;
+            font-size: 15px;
+            font-family: 'Courier New', monospace;
         }
 
         h1 {
-            font-size: 32px;
-            color: white;
-            margin: 10px 0;
+            margin-bottom: 15px;
+            font-size: 24px;
         }
 
         p {
-            color: #ccc;
             font-size: 16px;
             line-height: 1.5;
         }
 
-        .cta-button {
-            padding: 15px 25px;
-            background-color: #0078d4;
-            color: white;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.3s ease-in-out;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .cta-button:hover {
-            background-color: #005a8d;
-            transform: translateY(-3px);
-        }
-
-        .links a {
-            color: #0078d4;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 10px 0;
-            display: block;
-            transition: color 0.3s;
-        }
-
-        .links a:hover {
-            color: #005a8d;
-        }
-
-        code {
-            background-color: #333;
-            color: #fff;
-            padding: 12px 18px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-family: 'Courier New', monospace;
-            word-wrap: break-word;
-            display: block;
-            margin-top: 20px;
-        }
-
         footer {
-            font-size: 14px;
-            color: #777;
             margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
+            text-align: center;
         }
 
-        footer a {
-            color: #0078d4;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Light theme overrides */
-        body.light-theme {
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .light-theme .wrapper {
-            background-color: #fff;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .light-theme h1 {
-            color: #333;
-        }
-
-        .light-theme p {
-            color: #555;
-        }
-
-        .light-theme .cta-button {
-            background-color: #005a8d;
-        }
-
-        .light-theme .cta-button:hover {
-            background-color: #0078d4;
-        }
-
-        .light-theme footer {
-            color: #555;
-        }
-
-        .light-theme .links a {
-            color: #005a8d;
-        }
-
-        .light-theme .links a:hover {
-            color: #0078d4;
-        }
-
-        /* Toggle Switch */
-        .theme-switch {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 10;
+        footer img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 20px;
         }
 
         .switch-container {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
         }
 
-        .switch {
-            position: relative;
-            width: 60px;
-            height: 30px;
-            background-color: #ccc;
-            border-radius: 50px;
+        .switch-container input {
+            display: none;
+        }
+
+        .switch-container label {
             cursor: pointer;
-            transition: background-color 0.3s;
+            font-size: 24px;
         }
 
-        .switch::before {
-            content: '';
-            position: absolute;
-            top: 3px;
-            left: 3px;
-            width: 24px;
-            height: 24px;
-            background-color: white;
-            border-radius: 50%;
-            transition: transform 0.3s;
+        .light-theme {
+            background-color: #f4f4f4;
+            color: #333;
         }
 
-        .switch.active {
-            background-color: #0078d4;
+        .light-theme .container {
+            background: linear-gradient(135deg, #d9d9d9, #f1f1f1);
         }
 
-        .switch.active::before {
-            transform: translateX(30px);
+        .light-theme a {
+            color: #333;
+            background: #bbb;
+        }
+
+        .light-theme a:hover {
+            background: #4caf50;
+            color: white;
         }
     </style>
 </head>
 <body>
 
     <!-- Theme Switcher -->
-    <div class="theme-switch" onclick="toggleTheme()">
-        <div class="switch-container">
-            <span><i class="fas fa-moon"></i></span>
-            <div class="switch" id="themeSwitch">
-                <div class="switch-circle"></div>
-            </div>
-            <span><i class="fas fa-sun"></i></span>
-        </div>
+    <div class="switch-container">
+        <input type="checkbox" id="theme-switcher">
+        <label for="theme-switcher">
+            <i class="fas fa-sun"></i> / <i class="fas fa-moon"></i>
+        </label>
     </div>
 
-    <!-- Main Wrapper -->
-    <div class="wrapper">
+    <div class="container">
         <h1>AltStore Repo</h1>
         <p>Dodaj nasze repozytorium do AltStore, klikając poniższy link:</p>
-        <a href="https://twoj-nick.github.io/nazwa-repozytorium/altstore.json" class="cta-button" target="_blank">Dodaj do AltStore</a>
+        <p><a href="https://twoj-nick.github.io/nazwa-repozytorium/altstore.json">Dodaj do AltStore</a></p>
         <p>Skopiuj i wklej ten link ręcznie, jeśli potrzebujesz:</p>
         <code>https://twoj-nick.github.io/nazwa-repozytorium/altstore.json</code>
-
-        <div class="links">
-            <p>Więcej informacji:</p>
-            <a href="https://github.com/TwojeImie/altstore-repo" target="_blank">Zobacz projekt na GitHub</a>
-            <a href="https://twoj-nick.github.io/nazwa-repozytorium" target="_blank">Przejdź na stronę główną projektu</a>
-            <a href="https://twoj-nick.github.io/nazwa-repozytorium/docs" target="_blank">Dokumentacja projektu</a>
-        </div>
-
-        <footer>
-            <p>&copy; 2025 AltStore Repo. Wszystkie prawa zastrzeżone. <br>
-            <a href="https://github.com/TwojeImie" target="_blank">Odwiedź nasz GitHub</a></p>
-            <!-- Image in Footer -->
-            <img src="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png?ex=67b1c920&is=67b077a0&hm=57b136c2946a394db15020f57f33b71c0fb1ab49f9e1fa95488c4660ef8a266c&" alt="Badge Image" style="max-width: 100%; height: auto; border-radius: 12px; margin-top: 20px;">
-        </footer>
     </div>
 
+    <footer>
+        <p>&copy; 2025 AltStore Repo. Wszystkie prawa zastrzeżone. <br>
+        <a href="https://github.com/TwojeImie" target="_blank">Odwiedź nasz GitHub</a></p>
+        <img src="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png?ex=67b1c920&is=67b077a0&hm=57b136c2946a394db15020f57f33b71c0fb1ab49f9e1fa95488c4660ef8a266c&" alt="Badge Image">
+    </footer>
+
     <script>
-        // Function to toggle theme
-        function toggleTheme() {
-            const body = document.body;
-            const switchElement = document.getElementById('themeSwitch');
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const body = document.body;
 
-            body.classList.toggle('light-theme');
-            switchElement.classList.toggle('active');
-
-            // Save the theme preference to localStorage
-            if (body.classList.contains('light-theme')) {
+        themeSwitcher.addEventListener('change', function () {
+            if (this.checked) {
+                body.classList.add('light-theme');
                 localStorage.setItem('theme', 'light');
             } else {
+                body.classList.remove('light-theme');
                 localStorage.setItem('theme', 'dark');
             }
-        }
+        });
 
-        // Check localStorage for saved theme preference
-        window.onload = () => {
-            const savedTheme = localStorage.getItem('theme');
-            const switchElement = document.getElementById('themeSwitch');
-            if (savedTheme === 'light') {
-                document.body.classList.add('light-theme');
-                switchElement.classList.add('active');
+        // Check for saved theme in localStorage
+        window.onload = function() {
+            if (localStorage.getItem('theme') === 'light') {
+                body.classList.add('light-theme');
+                themeSwitcher.checked = true;
+            } else {
+                body.classList.remove('light-theme');
             }
-        }
+        };
     </script>
 
 </body>
