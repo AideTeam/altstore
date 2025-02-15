@@ -1,23 +1,18 @@
 {
     "name": "Moje Repozytorium AltStore",
-    "identifier": "com.twoj-nick.altstore.repo",
-    "sourceURL": "https://twoj-nick.github.io/nazwa-repozytorium/altstore.json",
+    "identifier": "com.aide.altstore.repo",
+    "sourceURL": "https://aideteam.github.io/altstore/altstore.json",
     "apps": [
         {
-            "name": "Nazwa Aplikacji",
-            "bundleIdentifier": "com.twoj-nick.nazwa-aplikacji",
-            "developerName": "Twoje Imię",
-            "subtitle": "Krótki opis aplikacji",
-            "version": "1.0.0",
-            "size": 50000000,
-            "downloadURL": "https://twoj-nick.github.io/nazwa-repozytorium/nazwa-aplikacji.ipa",
-            "localizedDescription": "Pełny opis aplikacji, co robi i jakie ma funkcje.",
-            "iconURL": "https://twoj-nick.github.io/nazwa-repozytorium/ikona.png",
-            "tintColor": "#4caf50",
-            "screenshots": [
-                "https://twoj-nick.github.io/nazwa-repozytorium/screenshot1.png",
-                "https://twoj-nick.github.io/nazwa-repozytorium/screenshot2.png"
-            ]
-        }
+            "name": "AIDE",
+            "bundleIdentifier": "com.aide.aide",
+            "developerName": "AIDE",
+            "subtitle": "An awesome app.",
+            "localizedDescription": "This is an awesome app only available on AltStore.",
+            "iconURL": "https://cdn.discordapp.com/icons/1332749889528004669/d5b95b26a37e3466f8593cacabe03392.webp?size=1024&width=921&height=921",
+            "tintColor": "#111111",
+            "category": "utilities",
+            "versions": []
+        },
     ]
 }
