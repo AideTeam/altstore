@@ -11,7 +11,6 @@
         {
             "name": "AIDE",
             "bundleIdentifier": "com.aideteam.aide",
-            "marketplaceID": "12345678",
             "developerName": "AIDE",
             "subtitle": "An awesome app.",
             "localizedDescription": "This is an awesome app only available on AltStore.",
@@ -20,7 +19,16 @@
             "category": "utilities",
             "screenshots": [],
             "versions": [
-                "1.0"
+                {
+                    "version": "b1.0",
+                    "buildVersion": "1",
+                    "date": "2025-02-15",
+                    "localizedDescription": "First test release :3",
+                    "downloadURL": "https://aideteam.github.io/apps/AIDE/AIDE-1.0.ipa",
+                    "size": 79821,
+                    "minOSVersion": "18.0",
+                    "maxOSVersion": "18.3.1"
+                }
             ],
             "appPermissions": {},
             "patreon": {}
