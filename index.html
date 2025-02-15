@@ -7,93 +7,123 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            text-align: center;
-            background-color: #0d0d0d;
-            color: white;
-            padding: 20px;
             margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #f4f4f4;
         }
+
+        /* Banner */
         .banner {
-            background: #4caf50;
+            background: #1e7e34;
             color: white;
-            padding: 15px;
-            font-size: 18px;
-            font-weight: bold;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px 0;
+            font-size: 22px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
+
+        /* Main container */
         .container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 40px auto;
-            background: linear-gradient(135deg, #1e1e1e, #292929);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #232323, #2e2e2e);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease-in-out;
         }
+
         .container:hover {
             transform: scale(1.05);
         }
-        a {
-            color: #4caf50;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            background: #444;
-            padding: 12px 18px;
-            border-radius: 8px;
-            transition: background 0.3s, transform 0.2s;
-        }
-        a:hover {
-            background: #4caf50;
-            color: white;
-            transform: scale(1.1);
-        }
-        code {
-            background: #2c2c2c;
-            padding: 8px 12px;
-            border-radius: 8px;
-            display: block;
-            margin-top: 15px;
-            font-size: 15px;
-            font-family: 'Courier New', monospace;
-        }
+
         h1 {
+            font-size: 28px;
+            color: #4caf50;
             margin-bottom: 15px;
-            font-size: 24px;
         }
+
         p {
             font-size: 16px;
             line-height: 1.5;
+            margin-bottom: 20px;
         }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            background: #4caf50;
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+        }
+
+        a:hover {
+            background: #45a049;
+            transform: scale(1.1);
+        }
+
+        /* Code block */
+        code {
+            background: #333;
+            color: #eee;
+            padding: 12px 18px;
+            border-radius: 8px;
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+
+        /* Footer */
         footer {
             background: #111;
-            color: white;
+            color: #aaa;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
+            font-size: 14px;
             position: fixed;
             bottom: 0;
             width: 100%;
-            font-size: 14px;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
         }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- Banner -->
     <div class="banner">
         AltStore Repo - Dodaj nasze repozytorium!
     </div>
 
+    <!-- Main content container -->
     <div class="container">
         <h1>AltStore Repo</h1>
         <p>Dodaj nasze repozytorium do AltStore, klikając poniższy link:</p>
-        <p><a href="https://twoj-nick.github.io/nazwa-repozytorium/altstore.json">Dodaj do AltStore</a></p>
+        <p><a href="https://twoj-nick.github.io/nazwa-repozytorium/altstore.json" target="_blank">Dodaj do AltStore</a></p>
         <p>Skopiuj i wklej ten link ręcznie, jeśli potrzebujesz:</p>
         <code>https://twoj-nick.github.io/nazwa-repozytorium/altstore.json</code>
     </div>
 
+    <!-- Footer -->
     <footer>
-        &copy; 2025 AltStore Repo. Wszelkie prawa zastrzeżone.
+        &copy; 2025 AltStore Repo. Wszystkie prawa zastrzeżone. <br>
+        <a href="https://github.com/TwojeImie" target="_blank">Odwiedź nasz GitHub</a>
     </footer>
+
 </body>
 </html>
