@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AltStore Repo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
         /* Default theme styles (dark theme) */
         body {
@@ -43,6 +44,14 @@
             font-weight: bold;
             text-align: center;
             border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .banner i {
+            font-size: 24px;
+            color: white;
         }
 
         h1 {
@@ -154,48 +163,73 @@
             color: #0078d4;
         }
 
-        /* Switcher button */
-        .switcher {
+        /* Toggle Switch */
+        .theme-switch {
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: #0078d4;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            font-size: 16px;
-            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
-        }
-
-        .switcher:hover {
-            background-color: #005a8d;
-        }
-
-        /* Badge Image */
-        .badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 100px;
-            height: auto;
             z-index: 10;
         }
 
+        .switch-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .switch::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .switch.active {
+            background-color: #0078d4;
+        }
+
+        .switch.active::before {
+            transform: translateX(30px);
+        }
     </style>
 </head>
 <body>
 
-    <!-- Badge image -->
-    <img src="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png?ex=67b1c920&is=67b077a0&hm=57b136c2946a394db15020f57f33b71c0fb1ab49f9e1fa95488c4660ef8a266c&" alt="Badge" class="badge">
-
-    <!-- Switcher button -->
-    <button class="switcher" onclick="toggleTheme()">Switch to Light Theme</button>
+    <!-- Theme Switcher -->
+    <div class="theme-switch" onclick="toggleTheme()">
+        <div class="switch-container">
+            <span>🌙</span>
+            <div class="switch" id="themeSwitch">
+                <div class="switch-circle"></div>
+            </div>
+            <span>☀️</span>
+        </div>
+    </div>
 
     <!-- Main Wrapper -->
     <div class="wrapper">
         <div class="banner">
-            AltStore Repo - Dodaj nasze repozytorium!
+            <span>AltStore Repo</span>
+            <i class="fas fa-cogs"></i>
         </div>
 
         <h1>AltStore Repo</h1>
@@ -221,16 +255,15 @@
         // Function to toggle theme
         function toggleTheme() {
             const body = document.body;
-            const switcher = document.querySelector('.switcher');
+            const switchElement = document.getElementById('themeSwitch');
 
             body.classList.toggle('light-theme');
+            switchElement.classList.toggle('active');
 
-            // Toggle button text
+            // Save the theme preference to localStorage
             if (body.classList.contains('light-theme')) {
-                switcher.textContent = 'Switch to Dark Theme';
                 localStorage.setItem('theme', 'light');
             } else {
-                switcher.textContent = 'Switch to Light Theme';
                 localStorage.setItem('theme', 'dark');
             }
         }
@@ -238,9 +271,10 @@
         // Check localStorage for saved theme preference
         window.onload = () => {
             const savedTheme = localStorage.getItem('theme');
+            const switchElement = document.getElementById('themeSwitch');
             if (savedTheme === 'light') {
                 document.body.classList.add('light-theme');
-                document.querySelector('.switcher').textContent = 'Switch to Dark Theme';
+                switchElement.classList.add('active');
             }
         }
     </script>
