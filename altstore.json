@@ -1,18 +1,12 @@
 {
-    "name": "Moje Repozytorium AltStore",
-    "identifier": "com.aide.altstore.repo",
-    "sourceURL": "https://aideteam.github.io/altstore/altstore.json",
-    "apps": [
-        {
-            "name": "AIDE",
-            "bundleIdentifier": "com.aide.aide",
-            "developerName": "AIDE",
-            "subtitle": "An awesome app.",
-            "localizedDescription": "This is an awesome app only available on AltStore.",
-            "iconURL": "https://cdn.discordapp.com/icons/1332749889528004669/d5b95b26a37e3466f8593cacabe03392.webp?size=1024&width=921&height=921",
-            "tintColor": "#111111",
-            "category": "utilities",
-            "versions": []
-        },
-    ]
+  "name": "AIDE",
+  "subtitle": "A source for all AIDE apps",
+  "description": "Welcome to AIDE source! Here you'll find all of our apps.",
+  "iconURL": "https://cdn.discordapp.com/icons/1332749889528004669/d5b95b26a37e3466f8593cacabe03392.webp?size=1024&width=921&height=921",
+  "headerURL": "https://cdn.discordapp.com/icons/1332749889528004669/d5b95b26a37e3466f8593cacabe03392.webp?size=1024&width=921&height=921",
+  "website": "https://aideteam.github.io",
+  "tintColor": "#000000",
+  "featuredApps": [],
+  "apps": [],
+  "news": [],
 }
