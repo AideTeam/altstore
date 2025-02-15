@@ -24,16 +24,16 @@
             text-align: center;
             background-color: #0d0d0d;
             color: white;
-            padding: 20px;
+            padding: 0;
             margin: 0;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .container {
             max-width: 600px;
-            margin: 40px auto;
+            margin: 60px auto;
             background: linear-gradient(135deg, #1e1e1e, #292929);
-            padding: 25px;
+            padding: 40px;
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease-in-out;
@@ -49,7 +49,7 @@
             font-weight: bold;
             display: inline-block;
             background: #444;
-            padding: 10px 15px;
+            padding: 8px 15px;
             border-radius: 8px;
             transition: background 0.3s, transform 0.2s;
             font-size: 14px; /* Mniejszy rozmiar przycisku */
@@ -74,6 +74,7 @@
         h1 {
             margin-bottom: 15px;
             font-size: 24px;
+            color: white;
         }
 
         p {
@@ -82,15 +83,16 @@
         }
 
         footer {
-            margin-top: 40px;
+            margin-top: 60px;
             text-align: center;
         }
 
         footer img {
-            max-width: 100%;
+            max-width: 150px;
             height: auto;
-            border-radius: 12px;
             margin-top: 20px;
+            border-radius: 12px;
+            cursor: pointer;
         }
 
         .switch-container {
@@ -106,6 +108,7 @@
         .switch-container label {
             cursor: pointer;
             font-size: 24px;
+            margin-top: 20px;
         }
 
         .light-theme {
@@ -140,8 +143,11 @@
 
     <div class="container">
         <h1>AltStore Repo</h1>
-        <p>Dodaj nasze repozytorium do AltStore, klikając poniższy link:</p>
-        <p><a href="https://twoj-nick.github.io/nazwa-repozytorium/altstore.json">Get it from AltStore</a></p>
+        <p>Dodaj nasze repozytorium do AltStore, klikając poniższy badge:</p>
+        <!-- Badge Image as link -->
+        <a href="https://twoj-nick.github.io/nazwa-repozytorium/altstore.json" target="_blank">
+            <img src="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png?ex=67b1c920&is=67b077a0&hm=57b136c2946a394db15020f57f33b71c0fb1ab49f9e1fa95488c4660ef8a266c&" alt="Badge Image" style="max-width: 150px;">
+        </a>
         <p>Skopiuj i wklej ten link ręcznie, jeśli potrzebujesz:</p>
         <code>https://twoj-nick.github.io/nazwa-repozytorium/altstore.json</code>
     </div>
@@ -149,8 +155,6 @@
     <footer>
         <p>&copy; 2025 AltStore Repo. Wszystkie prawa zastrzeżone. <br>
         <a href="https://github.com/TwojeImie" target="_blank">Odwiedź nasz GitHub</a></p>
-        <!-- Badge Image -->
-        <img src="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png?ex=67b1c920&is=67b077a0&hm=57b136c2946a394db15020f57f33b71c0fb1ab49f9e1fa95488c4660ef8a266c&" alt="Badge Image">
     </footer>
 
     <script>
@@ -173,10 +177,4 @@
                 body.classList.add('light-theme');
                 themeSwitcher.checked = true;
             } else {
-                body.classList.remove('light-theme');
-            }
-        };
-    </script>
-
-</body>
-</html>
+                body.classList.remove(
