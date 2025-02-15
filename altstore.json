@@ -18,8 +18,7 @@
         "tintColor": "#123456",
         "category": "utilities",
         "versions": ["1.0"],
-        "appPermissions": {},
-        "patreon": {},
+        "appPermissions": {}
       }
   ],
   "news": []
