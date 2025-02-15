@@ -3,151 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dodaj nasze repozytorium do AltStore, aby łatwo instalować aplikacje i uzyskać dostęp do najnowszych aktualizacji.">
-    <meta name="keywords" content="AltStore, repozytorium, aplikacje, instalacja, GitHub, AltStore Repo, linki, darmowe repozytoria">
+    <title>AltStore Repo - Najlepsze aplikacje do pobrania</title>
+    <meta name="description" content="Dodaj nasze repozytorium do AltStore i pobieraj ekskluzywne aplikacje. Łatwa instalacja i regularne aktualizacje!">
+    <meta name="keywords" content="AltStore, repozytorium, iOS, sideloading, IPA, aplikacje, jailbreak, App Store alternatywa, instalacja aplikacji, GitHub repo">
     <meta name="author" content="TwojeImie">
     <meta name="robots" content="index, follow">
     
-    <meta property="og:title" content="AltStore Repo">
-    <meta property="og:description" content="Dodaj nasze repozytorium do AltStore, klikając poniższy link i uzyskaj dostęp do aplikacji.">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png?ex=67b1c920&is=67b077a0&hm=57b136c2946a394db15020f57f33b71c0fb1ab49f9e1fa95488c4660ef8a266c&">
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:title" content="AltStore Repo - Najlepsze aplikacje do pobrania">
+    <meta property="og:description" content="Dodaj nasze repo do AltStore, aby uzyskać dostęp do ekskluzywnych aplikacji! Kliknij, aby dodać repo.">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png">
     <meta property="og:url" content="https://twoj-nick.github.io/nazwa-repozytorium/">
     <meta property="og:type" content="website">
-
-    <title>AltStore Repo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AltStore Repo - Ekskluzywne aplikacje">
+    <meta name="twitter:description" content="Dodaj nasze repo do AltStore i ciesz się nowymi aplikacjami na iOS! Kliknij, aby dodać.">
+    <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://twoj-nick.github.io/nazwa-repozytorium/favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" crossorigin="anonymous"></script>
+    
     <style>
         body {
             font-family: 'Arial', sans-serif;
             text-align: center;
             background-color: #0d0d0d;
             color: white;
-            padding: 0;
+            padding: 20px;
             margin: 0;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
-
         .container {
             max-width: 600px;
-            margin: 60px auto;
+            margin: 40px auto;
             background: linear-gradient(135deg, #1e1e1e, #292929);
-            padding: 40px;
+            padding: 25px;
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease-in-out;
         }
-
-        .container:hover {
-            transform: scale(1.05);
-        }
-
-        a {
-            text-decoration: none;
-            display: inline-block;
-            padding: 12px 18px;
-            border-radius: 8px;
-        }
-
-        footer {
-            margin-top: 60px;
-            text-align: center;
-        }
-
-        footer img {
-            max-width: 150px;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-
-        .switch-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .switch-container input {
-            display: none;
-        }
-
-        .switch-container label {
+        .theme-switch {
             cursor: pointer;
             font-size: 24px;
-            margin-top: 20px;
-        }
-
-        .light-theme {
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .light-theme .container {
-            background: linear-gradient(135deg, #d9d9d9, #f1f1f1);
-        }
-
-        .light-theme a {
-            color: #333;
-        }
-
-        .light-theme a:hover {
-            background: #4caf50;
+            position: absolute;
+            top: 20px;
+            right: 20px;
             color: white;
+        }
+        .badge {
+            display: inline-block;
+            margin-top: 15px;
+        }
+        code {
+            background: #2c2c2c;
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: block;
+            margin-top: 15px;
+            font-size: 15px;
+            font-family: 'Courier New', monospace;
+        }
+        footer {
+            margin-top: 40px;
+        }
+        footer img {
+            width: 150px;
+        }
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+        .light-theme .container {
+            background: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+        }
+        .light-theme code {
+            background: #e0e0e0;
+            color: black;
         }
     </style>
 </head>
 <body>
-
-    <!-- Theme Switcher -->
-    <div class="switch-container">
-        <input type="checkbox" id="theme-switcher">
-        <label for="theme-switcher">
-            <i class="fas fa-sun"></i> / <i class="fas fa-moon"></i>
-        </label>
-    </div>
-
+    <i class="fas fa-moon theme-switch" onclick="toggleTheme()"></i>
+    
     <div class="container">
         <h1>AltStore Repo</h1>
-        <p>Dodaj nasze repozytorium do AltStore, klikając poniższy badge:</p>
-        <!-- Badge Image as link -->
-        <a href="https://twoj-nick.github.io/nazwa-repozytorium/altstore.json" target="_blank">
-            <img src="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png?ex=67b1c920&is=67b077a0&hm=57b136c2946a394db15020f57f33b71c0fb1ab49f9e1fa95488c4660ef8a266c&" alt="Badge Image" style="max-width: 150px;">
+        <p>Dodaj nasze repozytorium do AltStore, klikając poniższy link:</p>
+        <a href="altstore://install?url=https://twoj-nick.github.io/nazwa-repozytorium/altstore.json">
+            <img src="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png" class="badge" alt="Get it on AltStore">
         </a>
         <p>Skopiuj i wklej ten link ręcznie, jeśli potrzebujesz:</p>
         <code>https://twoj-nick.github.io/nazwa-repozytorium/altstore.json</code>
     </div>
-
+    
     <footer>
-        <p>&copy; 2025 AltStore Repo. Wszystkie prawa zastrzeżone. <br>
-        <a href="https://github.com/TwojeImie" target="_blank">Odwiedź nasz GitHub</a></p>
+        <p>&copy; 2025 AltStore Repo | <a href="https://twoj-nick.github.io/">Strona Główna</a></p>
+        <img src="https://cdn.discordapp.com/attachments/1332856112663236631/1340280651546628127/badge.png" alt="Logo">
     </footer>
-
+    
     <script>
-        const themeSwitcher = document.getElementById('theme-switcher');
-        const body = document.body;
-
-        themeSwitcher.addEventListener('change', function () {
-            if (this.checked) {
-                body.classList.add('light-theme');
-                localStorage.setItem('theme', 'light');
+        function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+            const icon = document.querySelector('.theme-switch');
+            if (document.body.classList.contains('light-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
             } else {
-                body.classList.remove('light-theme');
-                localStorage.setItem('theme', 'dark');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
             }
-        });
-
-        // Check for saved theme in localStorage
-        window.onload = function() {
-            if (localStorage.getItem('theme') === 'light') {
-                body.classList.add('light-theme');
-                themeSwitcher.checked = true;
-            } else {
-                body.classList.remove('light-theme');
-            }
-        };
+        }
     </script>
-
 </body>
 </html>
-
