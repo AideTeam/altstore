@@ -11,15 +11,18 @@
     {
         "name": "AIDE",
         "bundleIdentifier": "com.aideteam.aide",
+        "marketplaceID": "12345678",
         "developerName": "AIDE",
         "subtitle": "An awesome app.",
         "localizedDescription": "This is an awesome app only available on AltStore.",
-        "iconURL": "https://cdn.discordapp.com/icons/1332749889528004669/d5b95b26a37e3466f8593cacabe03392.webp?size=1024&width=921&height=921",
-        "tintColor": "#123456",
+        "iconURL": "https://cdn.discordapp.com/icons/1332749889528004669/d5b95b26a37e3466f8593cacabe03392.webp?size=1024&width=921&height=921",",
+        "tintColor": "#F54F32",
         "category": "utilities",
+        "screenshots": [],
         "versions": ["1.0"],
-        "appPermissions": {}
-      }
+        "appPermissions": {},
+        "patreon": {}
+    }
   ],
   "news": []
 }
